@@ -1,180 +1,191 @@
-@use '../utilidades/variables' as var;
-@use '../utilidades/mixins' as mixins;
-@use '../utilidades/funciones' as funciones;
+@use '../utilidades/variables' as var; // Importa las variables desde el archivo variables.scss
+@use '../utilidades/funciones' as funciones; // Importa las funciones desde el archivo funciones.scss
 
 .auxiliar {
-    background-color: var.$color-secundario;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-family: var.$fuente-principal;
-    color: var.$color-texto-claro;
+    background-color: var.$color-secundario; // Establece el color de fondo usando una variable
+    border: none; // Sin borde
+    border-radius: 5px; // Bordes redondeados
+    padding: 10px 16px; // Espaciado interno
+    cursor: pointer; // Cambia el cursor al pasar sobre el botón
+    font-family: var.$fuente-principal; // Fuente principal
+    color: var.$color-texto-claro; // Color del texto
+    text-align: center; // Alineación del texto al centro
+    font-size: 1rem; // Tamaño de la fuente
+    @include funciones.zoom-on-hover; // Aplica el efecto de zoom al pasar el cursor
 }
 
 // Estilos para la página de Carrito
 .carrito {
-    text-align: center;
-    padding: 2rem;
+    text-align: center; // Alineación del texto al centro
+    padding: 2rem 5%; // Espaciado interno
 
     .contenedor-carrito {
-        border-radius: 10px;
-        background: var.$color-activo;
-        display: flex;
-        justify-content: space-between;
-        gap: 2rem;
-        padding: 2rem;
+        border-radius: 10px; // Bordes redondeados
+        background: var.$color-activo; // Color de fondo usando una variable
+        display: flex; // Uso de flexbox
+        flex-wrap: wrap; // Permite que los elementos se envuelvan
+        justify-content: center; // Centra los elementos
+        gap: 2rem; // Espaciado entre elementos
+        padding: 2rem; // Espaciado interno
 
-        @media (max-width: 1200px) {
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem;
-            gap: 1rem;
+        @media (max-width: 1024px) {
+            flex-direction: column; // Cambia la dirección a columna en pantallas pequeñas
+            align-items: center; // Alinea los elementos al centro
+            padding: 1.5rem; // Espaciado interno
+            gap: 1rem; // Espaciado entre elementos
         }
     }
 
     button {
-        @extend .auxiliar;
-        margin-top: 20px;
-        @include funciones.zoom-on-hover;
+        @extend .auxiliar; // Extiende los estilos de .auxiliar
+        margin-top: 20px; // Margen superior
+        width: 100%; // Ancho completo
     }
 
-    p{
-        font-family: var.$fuente-secundaria;
-        color: black;
+    p {
+        font-family: var.$fuente-secundaria; // Fuente secundaria
+        color: black; // Color del texto
     }
 
     .lista-articulos {
-        flex: 2;
-        background: var.$color-bloques;
-        padding: 1rem;
-        border-radius: 10px;
-        text-align: left;
-        width: 100%;
+        flex: 2; // Flexibilidad
+        background: var.$color-bloques; // Color de fondo usando una variable
+        padding: 1rem; // Espaciado interno
+        border-radius: 10px; // Bordes redondeados
+        text-align: left; // Alineación del texto a la izquierda
+        width: 100%; // Ancho completo
+        max-width: 600px; // Ancho máximo
 
         table {
-            width: 100%;
-            border-collapse: collapse;
+            width: 100%; // Ancho completo
+            border-collapse: collapse; // Colapsa los bordes de la tabla
         }
 
-        th{
-            padding: 0.5rem;
-            border-bottom: 1px solid var.$color-texto-oscuro;
-            text-align: left;
-            color: var.$color-texto-oscuro;
-            font-family: var.$fuente-principal;          
+        th {
+            padding: 0.5rem; // Espaciado interno
+            border-bottom: 1px solid var.$color-texto-oscuro; // Borde inferior
+            text-align: left; // Alineación del texto a la izquierda
+            color: var.$color-texto-oscuro; // Color del texto
+            font-family: var.$fuente-principal; // Fuente principal
         }
 
-        td{
-            padding: 0.5rem;
-            border-bottom: 1px solid var.$color-texto-oscuro;
-            color: black;
-            font-family: var.$fuente-secundaria;
-        }
-
-        .titulos{
-            font-family: var.$fuente-principal;
+        td {
+            padding: 0.5rem; // Espaciado interno
+            border-bottom: 1px solid var.$color-texto-oscuro; // Borde inferior
+            color: black; // Color del texto
+            font-family: var.$fuente-secundaria; // Fuente secundaria
         }
 
         img {
-            width: 100px;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        @media (max-width: 1200px) {
-            overflow-x: auto;
-            display: block;
-
-            table {
-                display: block;
-                width: 100%;
-                overflow-x: auto;
-                white-space: nowrap;
-            }
-        }
-    }
-    .factura {
-        flex: 1;
-        background: var.$color-bloques;
-        padding: 1rem;
-        border-radius: 10px;
-        width: 100%;
-        max-width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        h2 {
-            color: var.$color-texto-oscuro;
-        }
-
-        button {
-            align-self: flex-end;
+            width: 80px; // Ancho de la imagen
+            height: auto; // Altura automática
+            border-radius: 10px; // Bordes redondeados
         }
 
         @media (max-width: 768px) {
-            max-width: 100%;
+            overflow-x: auto; // Desbordamiento horizontal
+            display: block; // Display en bloque
+
+            table {
+                display: block; // Display en bloque
+                width: 100%; // Ancho completo
+                overflow-x: auto; // Desbordamiento horizontal
+                white-space: nowrap; // No permite el salto de línea
+            }
         }
     }
 
-    // Cupón a lo largo de toda la pantalla
-    .cupon {
-        background: var.$color-pastel;
-        padding: 1rem;
-        border-radius: 10px;
-        margin-top: 25px;
-        width: 100vw; // Asegura que ocupe el ancho completo de la pantalla
-        max-width: 100%; // Evita desbordamientos inesperados
-        margin-left: auto; // Centra correctamente
-        margin-right: auto; // Centra correctamente
-        text-align: center;
-    
+    .factura {
+        flex: 1; // Flexibilidad
+        background: var.$color-bloques; // Color de fondo usando una variable
+        padding: 1rem; // Espaciado interno
+        border-radius: 10px; // Bordes redondeados
+        width: 100%; // Ancho completo
+        max-width: 350px; // Ancho máximo
+        display: flex; // Uso de flexbox
+        flex-direction: column; // Dirección de los elementos en columna
+        justify-content: space-between; // Espaciado entre elementos
+        text-align: left; // Alineación del texto a la izquierda
+
         h2 {
-            color: var.$color-texto-oscuro;
-        }
-    
-        // Contenedor para el input y botón
-        .cupon-input-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px; // Espacio entre input y botón
-            max-width: 400px; // No hacerlo muy grande en pantallas grandes
-            margin: 0 auto;
-            width: 100%;
+            color: var.$color-texto-oscuro; // Color del texto
+            font-size: 1.5rem; // Tamaño de la fuente
         }
 
-        input {
-            flex: 1; // Permite que el input se adapte al contenedor
-            min-width: 50px; // Previene que se haga demasiado pequeño
-            padding: 0.5rem;
-            border: 1px solid var.$color-secundario;
-            border-radius: 5px;
-            font-size: 1rem;
+        p {
+            font-size: 1rem; // Tamaño de la fuente
         }
 
         button {
-            @extend .auxiliar;
-            padding: 0.5rem 1rem;
-            white-space: nowrap; // Evita que el texto del botón se corte en varias líneas
+            width: 100%; // Ancho completo
+            align-self: center; // Alineación al centro
+            @include funciones.zoom-on-hover; // Efecto hover en el botón de pago
+        }
+
+        @media (max-width: 768px) {
+            max-width: 100%; // Ancho máximo
+        }
+    }
+
+    // Cupón
+    .cupon {
+        background: var.$color-pastel; // Color de fondo usando una variable
+        padding: 1rem; // Espaciado interno
+        border-radius: 10px; // Bordes redondeados
+        margin-top: 20px; // Margen superior
+        width: 90%; // Ancho del 90%
+        max-width: 400px; // Ancho máximo
+        margin-left: auto; // Margen izquierdo automático
+        margin-right: auto; // Margen derecho automático
+        text-align: center; // Alineación del texto al centro
+
+        h2 {
+            color: var.$color-texto-oscuro; // Color del texto
+            font-size: 1.3rem; // Tamaño de la fuente
+        }
+
+        .cupon-input-container {
+            display: flex; // Uso de flexbox
+            justify-content: center; // Centra los elementos
+            align-items: center; // Alinea los elementos al centro
+            gap: 10px; // Espaciado entre elementos
+            max-width: 100%; // Ancho máximo
+            margin: 0 auto; // Margen automático
+            flex-wrap: wrap; // Permite que los elementos se envuelvan
+        }
+
+        input {
+            flex: 1; // Flexibilidad
+            min-width: 50px; // Ancho mínimo
+            padding: 0.5rem; // Espaciado interno
+            border: 1px solid var.$color-secundario; // Borde
+            border-radius: 5px; // Bordes redondeados
+            font-size: 1rem; // Tamaño de la fuente
+            width: 70%; // Ancho del 70%
+        }
+
+        button {
+            @extend .auxiliar; // Extiende los estilos de .auxiliar
+            padding: 0.5rem 1rem; // Espaciado interno
+            white-space: nowrap; // No permite el salto de línea
+            width: 100%; // Ancho completo
+            @include funciones.zoom-on-hover; // Efecto hover en el botón de cupón
         }
 
         @media (max-width: 768px) {
             .cupon-input-container {
-                flex-direction: column; // En móviles, apila el input y el botón
-                width: 90%; // Reduce el tamaño para evitar desbordamiento
+                flex-direction: column; // Dirección de los elementos en columna
+                width: 100%; // Ancho completo
             }
 
             input {
-                width: 100%; // Asegura que el input se ajuste al contenedor
-                font-size: 0.9rem; // Reduce ligeramente el tamaño del texto
+                width: 100%; // Ancho completo
+                font-size: 0.9rem; // Tamaño de la fuente
             }
 
             button {
-                width: 100%; // Hace que el botón tenga el mismo ancho que el input
+                width: 100%; // Ancho completo
             }
         }
     }
-    
 }

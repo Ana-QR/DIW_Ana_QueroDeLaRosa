@@ -1,74 +1,143 @@
-@use '../utilidades/variables' as variables;
-@use '../utilidades/mixins';
-@use '../utilidades/funciones';
+@use '../utilidades/variables' as variables; // Importa las variables 
+@use '../utilidades/funciones' as funciones; // Importa las funciones 
 
 /* Clase auxiliar para reutilizar estilos */
 .auxiliar {
-    background-color: variables.$color-secundario;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-family: variables.$fuente-principal;
-    color: variables.$color-texto-claro;
+    background-color: variables.$color-secundario; // Color de fondo
+    border: none; // Sin borde
+    border-radius: 5px; // Bordes redondeados
+    padding: 10px 16px; // Espaciado interno
+    cursor: pointer; // Cambia el cursor al pasar por encima
+    font-family: variables.$fuente-principal; // Fuente principal
+    color: variables.$color-texto-claro; // Color del texto
+    text-align: center; // Alineación del texto al centro
+    font-size: 1rem; // Tamaño de fuente
+    @include funciones.zoom-on-hover; // Agrega el efecto de zoom al pasar el cursor
 }
 
 // Estilos para la página de Registro
 .registro {
-    text-align: center;
-    padding: 2rem;
+    text-align: center; // Alineación del texto al centro
+    padding: 2rem 5%; // Reduce los bordes laterales
 
     .formulario {
-        background: variables.$color-activo;
-        padding: 2rem;
-        border-radius: 10px;
-        text-align: left;
-        width: 80%;
-        max-width: 900px; 
-        margin: 0 auto;
+        background: variables.$color-activo; // Color de fondo del formulario
+        padding: 2rem; // Espaciado interno
+        border-radius: 10px; // Bordes redondeados
+        text-align: left; // Alineación del texto a la izquierda
+        width: 90%; // Ancho del formulario
+        margin: 0 auto; // Centra el formulario
 
         h2 {
-            font-size: 1.5rem;
-            color: variables.$color-texto-oscuro;
-            text-align: center;
+            font-size: 1.8rem; // Tamaño de fuente
+            color: variables.$color-texto-oscuro; // Color del texto
+            text-align: center; // Alineación del texto al centro
+            margin-bottom: 1rem; // Margen inferior
+            word-break: break-word; // Evita desbordamientos de texto
         }
 
         form {
-            display: flex;
-            flex-direction: column;
+            display: flex; // Flexbox
+            flex-direction: column; // Dirección de los elementos en columna
+            gap: 1rem; // Espaciado entre elementos
 
             label {
-                font-size: 1rem;
-                color: black;
-                margin-top: 1rem;
+                font-size: 1rem; // Tamaño de fuente
+                color: black; // Color del texto
             }
 
             input[type="email"],
             input[type="password"] {
-                padding: 0.5rem;
-                border-radius: 5px;
-                border: 1px solid variables.$color-secundario;
-                margin-top: 0.3rem;
+                padding: 0.6rem; // Espaciado interno
+                border-radius: 5px; // Bordes redondeados
+                border: 1px solid variables.$color-secundario; // Borde
+                font-size: 1rem; // Tamaño de fuente
+                width: 100%; // Ancho del input
             }
 
             .recordar {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                margin-top: 1rem;
+                display: flex; // Flexbox
+                align-items: center; // Alineación de los elementos al centro
+                gap: 0.5rem; // Espaciado entre elementos
+                margin-top: 0.5rem; // Margen superior
+
+                label {
+                    font-size: 0.9rem; // Tamaño de fuente
+                }
             }
 
             .boton-enviar {
-                @extend .auxiliar;
-                margin-top: 1rem;
+                @extend .auxiliar; // Extiende los estilos de la clase auxiliar
+                width: 100%; // Ancho del botón
+                margin-top: 1rem; // Margen superior
+                padding: 12px; // Espaciado interno
+                @include funciones.zoom-on-hover; // Agregamos la animación de zoom
             }
         }
     }
 
+    /* Ajustes para tablets */
     @media (max-width: 768px) {
         .formulario {
-            width: 90%;
-            padding: 1rem;
+            width: 90%; // Ancho del formulario
+            padding: 1.5rem; // Espaciado interno
+        }
+
+        h2 {
+            font-size: 1.5rem; // Tamaño de fuente
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            font-size: 0.95rem; // Tamaño de fuente
+        }
+
+        .boton-enviar {
+            font-size: 0.95rem; // Tamaño de fuente
+        }
+    }
+
+    /* Ajustes para móviles pequeños (menos de 480px) */
+    @media (max-width: 480px) {
+        padding: 1rem 3%; // Reduce los bordes laterales
+
+        .formulario {
+            width: 95%; // Ancho del formulario
+            padding: 1rem; // Espaciado interno
+        }
+
+        h2 {
+            font-size: 1.4rem; // Tamaño de fuente
+            padding: 0.5rem; // Espaciado interno
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            font-size: 0.9rem; // Tamaño de fuente
+            padding: 0.5rem; // Espaciado interno
+        }
+
+        .boton-enviar {
+            font-size: 0.9rem; // Tamaño de fuente
+            padding: 10px; // Espaciado interno
+        }
+    }
+
+    /* Ajustes extra para dispositivos muy pequeños (< 360px) */
+    @media (max-width: 360px) {
+        h2 {
+            font-size: 1.2rem; // Tamaño de fuente
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            font-size: 0.85rem; // Tamaño de fuente
+            padding: 0.4rem; // Espaciado interno
+        }
+
+        .boton-enviar {
+            font-size: 0.85rem; // Tamaño de fuente
+            padding: 8px; // Espaciado interno
         }
     }
 }

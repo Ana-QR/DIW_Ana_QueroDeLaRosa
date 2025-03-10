@@ -2,34 +2,34 @@
 @use '../utilidades/mixins';
 
 #productosVender {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem;
-    text-align: center;
+    display: grid; // Utiliza un grid layout para los productos
+    grid-template-columns: repeat(3, 1fr); // Tres columnas de igual tamaño
+    gap: 2rem; // Espacio entre los elementos del grid
+    padding: 2rem; // Espacio interno del contenedor
+    text-align: center; // Centra el texto dentro del contenedor
 
     article {
-        background: #d2b48c;
-        padding: 1rem;
-        border-radius: 10px;
-        text-align: center;
-        transition: transform 0.3s ease-in-out;
+        background: var.$color-activo; // Color de fondo de los artículos
+        padding: 1rem; // Espacio interno de los artículos
+        border-radius: 10px; // Bordes redondeados de los artículos
+        text-align: center; // Centra el texto dentro de los artículos
+        transition: transform 0.3s ease-in-out; // Transición suave para transformaciones
 
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.05); // Aumenta el tamaño del artículo al pasar el ratón por encima
         }
 
         img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 5px;
+            width: 100%; // Ancho completo de la imagen
+            height: 250px; // Altura fija de la imagen
+            object-fit: cover; // La imagen cubre el contenedor manteniendo la proporción
+            border-radius: 5px; // Bordes redondeados de la imagen
         }
 
         p {
-            font-size: 1.2rem;
-            color: #5a3e36;
-            margin-top: 1rem;
+            font-size: 1.2rem; // Tamaño de fuente del texto
+            color: black; // Color del texto
+            margin-top: 1rem; // Margen superior del texto
         }
     }
 }
@@ -37,12 +37,12 @@
 /* Responsividad para adaptar los productos */
 @media (max-width: 1200px) {
     #productosVender {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); // Dos columnas de igual tamaño en pantallas medianas
     }
 }
 
 @media (max-width: 768px) {
     #productosVender {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; // Una columna en pantallas pequeñas
     }
 }
