@@ -1,0 +1,129 @@
+@use '../utilidades/variables' as var;
+@use '../utilidades/mixins';
+
+// Carrusel de productos
+#productos {
+  text-align: center;
+  padding: 50px;
+
+  h2 {
+    font-family: var.$fuente-principal;
+    font-size: 30px;
+    color: var.$color-texto-oscuro;
+    margin-bottom: 20px;
+  }
+
+  .bloque_productos {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+    overflow: hidden; // Evita desbordamientos
+  }
+
+  .opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto; // Permite desplazamiento horizontal si es necesario
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px; // Evita que el scroll tape contenido
+
+    &::-webkit-scrollbar {
+      display: none; // Oculta la barra de desplazamiento en WebKit
+    }
+  }
+
+  .opcion {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 300px;
+    position: relative;
+    scroll-snap-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .opcion figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .opcion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .opcion p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: var.$fuente-principal;
+  }
+
+  .fa-chevron-left,
+  .fa-chevron-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10; // Asegura que los botones estén por encima del contenido
+  }
+
+  .fa-chevron-left {
+    left: 10px;
+  }
+
+  .fa-chevron-right {
+    right: 10px;
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 1600px) {
+  .opciones {
+    justify-content: center; // Centrar productos restantes
+  }
+  .opciones .opcion:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  .opciones {
+    justify-content: center; // Centrar productos restantes
+  }
+  .opciones .opcion:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 930px) {
+  .opciones {
+    justify-content: center; // Centrar productos restantes
+  }
+  .opciones .opcion:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .opciones .opcion:nth-of-type(2) {
+    margin: 0 auto;
+  }
+}
+

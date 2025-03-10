@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repostería Bioartesa</title>
+    <script type="module" src="./js/main.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Montserrat:wght@100;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <figure class="logo">
+            <a href="./inicio.html">
+                <source srcset="./img/LOGO.webp" type="image/webp">
+                <source srcset="./img/LOGO.png" type="image/png">
+                <source srcset="./img/LOGO.jpg" type="image/jpg">
+                <img src="./img/LOGO.png" alt="LOGO">
+            </a>
+        </figure>
+        <form class="barra_busqueda">
+            <input type="text" placeholder="Buscar...">
+            <button class="boton_busqueda" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <aside class="actions">
+            <a href="./html/registro.html" class="boton_registro">Regístrate</a>
+            <button class="boton_carrito" aria-label="Carrito de compras">
+                <a href="./html/carrito.html">
+                    <i class="fa-solid fa-basket-shopping" style="color: #CC9487;"></i>
+                </a>
+            </button>
+        </aside>
+    </header>
+
+    <nav class="menu">
+        <a href="./html/sobreNosotros.html" class="objeto_menu">Sobre Nosotros</a>
+        <a href="./html/tienda.html" class="objeto_menu">Tienda</a>
+    </nav>
+
+    <main>
+        <section id="sobre-nosotros">
+            <h1>Nuestra historia</h1>
+            <article class="bloque_imagen_texto">
+                <section id="texto_nuestra_historia">
+                    <article>
+                        <p>Todo comenzó en un pequeño y encantador pueblo de la península, donde la pasión por la
+                            repostería artesanal se convirtió en el motor de una idea: crear dulces que fueran mucho
+                            más que postres, pequeñas obras de arte llenas de sabor, tradición y amor.
+                            <br><br>
+                            Con dedicación y esmero, cada receta fue perfeccionándose a lo largo del tiempo, manteniendo
+                            siempre la esencia de los ingredientes naturales y las técnicas tradicionales transmitidas
+                            de
+                            generación en generación...
+                        </p>
+                    </article>
+
+                    <article>
+                        <button>
+                            <a href="./html/sobreNosotros.html">Más...</a>
+                        </button>
+                    </article>
+                </section>
+                <figure>
+                    <picture>
+                        <!-- Imágenes para resolución máxima de 400px -->
+                        <source srcset="./img/croissantsFresas400.webp" media="(max-width: 400px)" type="image/webp">
+                        <source srcset="./img/croissantsFresas400.jpg" media="(max-width: 400px)" type="image/jpg">
+                        <source srcset="./img/croissantsFresas400.png" media="(max-width: 400px)" type="image/png">
+
+                        <!-- Imágenes para resolución máxima de 480px -->
+                        <source srcset="./img/croissantsFresas480.webp" media="(max-width: 480px)" type="image/webp">
+                        <source srcset="./img/croissantsFresas480.jpg" media="(max-width: 480px)" type="image/jpg">
+                        <source srcset="./img/croissantsFresas480.png" media="(max-width: 480px)" type="image/png">
+                    
+                        <!-- Imágenes para resolución máxima de 768px -->
+                        <source srcset="./img/croissantsFresas768.webp" media="(max-width: 768px)" type="image/webp">
+                        <source srcset="./img/croissantsFresas768.jpg" media="(max-width: 768px)" type="image/jpg">
+                    
+                        <!-- Imágenes por defecto para pantallas más grandes -->
+                        <source srcset="./img/croissantsFresas1200.webp" type="image/webp">
+                        <source srcset="./img/croissantsFresas1200.jpg" type="image/jpg">
+                        <source srcset="./img/croissantsFresas1200.png" type="image/png">
+                    
+                        <img src="./img/croissantsFresas1200.jpg" alt="Croissants de fresas y nata">
+                    </picture>
+                    
+                </figure>
+            </article>
+        </section>
+
+        <section id="productos">
+            <h2>Te puede interesar</h2>
+            <article class="bloque_productos">
+                <section class="opciones">
+                    <i class="fa-solid fa-chevron-left" style="color: #644434;"></i>
+                    <article class="opcion">
+                        <figure>
+                            <source srcset="./img/panetone400.webp" type="image/webp">
+                            <source srcset="./img/panetone400.png" type="image/png">
+                            <source srcset="./img/panetone400.jpg" type="image/jpg">
+                            <img src="./img/panetone400.jpg" alt="Panetone">
+                            <p>Más vendido</p>
+                        </figure>
+                    </article>
+                    <article class="opcion">
+                        <figure>
+                            <source srcset="./img/tartaFresas400.webp" type="image/webp">
+                            <source srcset="./img/tartaFresas400.png" type="image/png">
+                            <source srcset="./img/tartaFresas400.jpg" type="image/jpg">
+                            <img src="./img/tartaFresas400.jpg" alt="Tarta de fresas">
+                            <p>Productos veganos</p>
+                        </figure>
+                    </article>
+                    <article class="opcion">
+                        <figure>
+                            <source srcset="./img/torrijas400.webp" type="image/webp">
+                            <source srcset="./img/torrijas400.png" type="image/png">
+                            <source srcset="./img/torrijas400.jpg" type="image/jpg">
+                            <img src="./img/torrijas400.jpg" alt="Torrijas">
+                            <p>Productos locales</p>
+                        </figure>
+                    </article>
+                    <article class="opcion">
+                        <figure>
+                            <source srcset="./img/magdalenasNuecesPasas400.webp" type="image/webp">
+                            <source srcset="./img/magdalenasNuecesPasas400.png" type="image/png">
+                            <source srcset="./img/magdalenasNuecesPasas400.jpg" type="image/jpg">
+                            <img src="./img/magdalenasNuecesPasas400.jpg"
+                                alt="Magdalenas de nueces y pasas">
+                            <p>Sin azúcar</p>
+                        </figure>
+                    </article>
+                    <i class="fa-solid fa-chevron-right" style="color: #644434;"></i>
+                </section>
+            </article>
+        </section>
+
+        <section id="procedencia">
+            <h1>Origen de nuestros productos</h1>
+            <article class="bloque_granja_imagen_texto">
+                <section class="contenido_texto">
+                    <p>Nuestras granjas colaboradoras son libres de crueldad animal, garantizando el bienestar de los
+                        animales en cada
+                        etapa de producción...
+                    </p>
+
+                    <p>Además, damos prioridad a las granjas locales, apoyando a pequeños productores de la región y 
+                        fomentando una economía más sostenible. Al elegir ingredientes de proximidad, no solo garantizamos 
+                        la frescura y calidad de nuestros productos, sino que también reducimos la huella de carbono 
+                        asociada al transporte...
+                    </p>
+                </section>
+                <figure>
+                    <picture>
+                        <!-- Imágenes para resolución máxima de 400px -->
+                        <source media="(max-width: 400px)" srcset="./img/granjera400.webp" type="image/webp">
+                        <source media="(max-width: 400px)" srcset="./img/granjera400.png" type="image/png">
+                        <source media="(max-width: 400px)" srcset="./img/granjera400.jpg" type="image/jpeg">
+
+                        <!-- Imágenes para resolución máxima de 480px -->
+                        <source media="(max-width: 480px)" srcset="./img/granjera480.webp" type="image/webp">
+                        <source media="(max-width: 480px)" srcset="./img/granjera480.png" type="image/png">
+                        <source media="(max-width: 480px)" srcset="./img/granjera480.jpg" type="image/jpeg">
+                    
+                        <!-- Imágenes para resolución máxima de 768px -->
+                        <source media="(max-width: 768px)" srcset="./img/granjera768.webp" type="image/webp">
+                        <source media="(max-width: 768px)" srcset="./img/granjera768.jpg" type="image/jpeg">
+                    
+                        <!-- Imágenes por defecto para pantallas más grandes -->
+                        <source srcset="./img/granjera1200.webp" type="image/webp">
+                        <source srcset="./img/granjera1200.png" type="image/png">
+                        <source srcset="./img/granjera1200.jpg" type="image/jpeg">
+                    
+                        <!-- Imagen de respaldo si el navegador no soporta <picture> -->
+                        <img src="./img/granjera1200.jpg" alt="Granjera con pañuelo azul">
+                    </picture>
+                    
+                </figure>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <section class="social-media">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" style="font-size: 2em;"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" style="font-size: 2em;"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" style="font-size: 2em;"></i></a>
+        </section>
+
+        <section class="footer-info">
+            <p><a href="#">Información de contacto</a></p>
+            <p><a href="#">Términos de uso</a></p>
+            <p>© 2025 Repostería Bioartesa</p>
+        </section>
+    </footer>
+</body>
+
+</html>

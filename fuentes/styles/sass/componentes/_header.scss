@@ -1,0 +1,130 @@
+@use "../utilidades/_variables" as variables; 
+@use "../utilidades/_mixins" as mixins;
+@use "../utilidades/_funciones" as funcion;
+@use "../base/_base";
+
+/* Asignación de variables para interpolación */
+$color-background: variables.$color-fondo; // Asigna el valor de la variable $color-fondo a $color-background
+$color-encabezado: variables.$color-encabezado; // Asigna el valor de la variable $color-encabezado a $color-encabezado
+$color-principal: variables.$color-principal; // Asigna el valor de la variable $color-principal a $color-principal
+$color-secundario: variables.$color-secundario; // Asigna el valor de la variable $color-secundario a $color-secundario
+$color-activo: variables.$color-activo; // Asigna el valor de la variable $color-activo a $color-activo
+$color-texto-oscuro: variables.$color-texto-oscuro; // Asigna el valor de la variable $color-textexto-oscuro a $color-texto-oscuro
+$color-texto-claro: variables.$color-texto-claro; // Asigna el valor de la variable $color-texto-claro a $color-texto-claro
+$fuente-principal: variables.$fuente-principal; // Asigna el valor de la variable $fuente-principal a $fuente-principal
+$fuente-secundaria: variables.$fuente-secundaria; // Asigna el valor de la variable $fuente-secundaria a $fuente-secundaria
+
+/* Clase auxiliar para heredar */
+.auxiliar {
+    background-color: #{variables.$color-secundario}; // Establece el color de fondo usando la variable $color-secundario
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: #{variables.$fuente-principal}; // Establece la fuente usando la variable $fuente-principal
+    color: #{variables.$color-texto-claro}; // Establece el color del texto usando la variable $color-texto-claro
+}
+
+/* Estilos del header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #{variables.$color-encabezado}; // Usando variable de color para el fondo del header
+  margin: 0 auto; // Centra el header horizontalmente
+  margin-right: 20px;
+
+  .logo {
+    max-width: 150px; // Limita el ancho máximo del logo
+    flex-shrink: 0; // Evita que el logo se reduzca demasiado
+
+    img {
+      width: 100%; // Asegura que la imagen del logo ocupe todo el contenedor
+      height: auto; // Mantiene la proporción de la imagen
+    }
+  }
+
+  .barra_busqueda {
+    display: flex;
+    flex-grow: 2; // Permite que el contenedor crezca, pero menos que otros elementos flexibles
+    gap: 10px; // Espacio entre los elementos hijos
+    padding: 10px; // Espaciado interno del contenedor
+
+    input {
+      border: none; // Sin borde para el input
+      padding: 8px; // Espaciado interno del input
+      flex-grow: 1; // Permite que el input crezca para ocupar el espacio disponible
+      width: 100%; // Asegura que el input ocupe todo el ancho del contenedor
+    }
+
+    .boton_busqueda {
+      background: none; // Sin fondo para el botón
+      border: none; // Sin borde para el botón
+      cursor: pointer; // Cambia el cursor al pasar sobre el botón
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px; // Espacio entre los botones de acción
+    margin: 10px 10px; // Margen alrededor del contenedor de acciones
+
+    .boton_registro {
+      @extend .auxiliar; // Extiende los estilos del selector .auxiliar
+      @include funcion.zoom-on-hover; // Aplica la funcion zoom-on-hover
+    }
+
+    .boton_carrito {
+      border: none; // Sin borde para el botón
+      padding: 8px; // Espaciado interno del botón
+      cursor: pointer; // Cambia el cursor al pasar sobre el botón
+      width: 40px; // Ancho fijo del botón
+      height: 40px; // Alto fijo del botón
+    }
+  }
+}
+
+header {
+  background-color: #{variables.$color-encabezado}; // Usando variable de color para el fondo del header
+  padding: 10px; // Espaciado interno del header
+  justify-content: space-between; // Espacio entre los elementos hijos
+}
+
+
+@media (max-width: 1024px) {
+  .header .logo {
+    width: clamp(80px, 10vw, 140px); // Ajusta el ancho del logo según el tamaño de la pantalla
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column; // Cambia la dirección del flex a columna
+    align-items: center; // Centra los elementos en la columna
+
+    .barra_busqueda {
+      flex-grow: 1; // Permite que el contenedor crezca para ocupar el espacio disponible
+      width: 90%; // Ancho del contenedor de búsqueda
+    }
+
+    .logo {
+      width: 100px; // Ancho fijo del logo
+    }
+
+    .actions {
+      gap: 5px; // Espacio reducido entre los botones de acción
+    }
+  }
+
+  header {
+    flex-direction: column; // Cambia la dirección del flex a columna
+    align-items: center; // Centra los elementos en la columna
+  }
+}
+
+@media (max-width: 480px) {
+  header .barra_busqueda {
+    display: none; // Oculta la barra de búsqueda en pantallas pequeñas
+  }
+}

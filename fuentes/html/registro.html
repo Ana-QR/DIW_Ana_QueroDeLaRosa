@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Repostería Bioartesa</title>
+    <link rel="stylesheet" href="../styles/sass/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Montserrat:wght@100;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <figure class="logo">
+            <a href="../inicio.html">
+                <picture>
+                    <source srcset="../img/LOGO.webp" type="image/webp">
+                    <source srcset="../img/LOGO.png" type="image/png">
+                    <source srcset="../img/LOGO.jpg" type="image/jpg">
+                    <img src="../img/LOGO.png" alt="LOGO">
+                </picture>
+            </a>
+        </figure>
+        <form class="barra_busqueda">
+            <input type="text" placeholder="Buscar...">
+            <button class="boton_busqueda" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <aside class="actions">
+            <a href="./registro" class="boton_registro">Regístrate</a>
+            <button class="boton_carrito" aria-label="Carrito de compras">
+                <a href="./carrito.html">
+                    <i class="fa-solid fa-basket-shopping" style="color: #CC9487;"></i>
+                </a>
+            </button>
+        </aside>
+    </header>
+
+    <nav class="menu">
+        <a href="./sobreNosotros.html" class="objeto_menu">Sobre Nosotros</a>
+        <a href="./tienda.html" class="objeto_menu">Tienda</a>
+    </nav>
+
+    <main class="registro">
+        <section class="formulario">
+            <h2>Inicia sesión o regístrate</h2>
+            <form action="#" method="POST">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+
+                <section class="recordar">
+                    <input type="checkbox" id="recordar" name="recordar">
+                    <label for="recordar">Recuérdame</label>
+                </section>
+                
+                <button type="submit" class="boton-enviar">INICIO O REGISTRO</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section class="social-media">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" style="font-size: 2em;"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" style="font-size: 2em;"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" style="font-size: 2em;"></i></a>
+        </section>
+
+        <section class="footer-info">
+            <p><a href="#">Información de contacto</a></p>
+            <p><a href="#">Términos de uso</a></p>
+            <p>© 2025 Repostería Bioartesa</p>
+        </section>
+    </footer>
+</body>
+
+</html>

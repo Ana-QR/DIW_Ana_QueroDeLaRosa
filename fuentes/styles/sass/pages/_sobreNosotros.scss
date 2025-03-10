@@ -1,0 +1,271 @@
+@use '../utilidades/variables' as var;
+@use '../utilidades/mixins';
+
+// Estilos para la página Sobre Nosotros
+.sobre-nosotros {
+    text-align: center;
+    padding: 2rem;
+
+    // Sección Historia Mejorada
+    .historia {
+        position: relative;
+        background: var.$color-bloques;
+        padding: 3rem 2rem; // Se amplía el padding para alargar el bloque
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+        height: 450px; // Se hace más alto el bloque
+
+        h2 {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var.$color-texto-oscuro;
+            font-size: 2rem;
+            z-index: 3;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 1525px) {
+            h2 {
+            font-size: 1.5rem;
+            top: 10%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+            font-size: 1.5rem;
+            top: 10%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+            font-size: 1.2rem;
+            top: 10%;
+            }
+        }
+
+        p {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            color: var.$color-texto-oscuro;
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            z-index: 2;
+        }
+
+        img {
+            width: 100%;
+            height: 450px; // Ajuste de altura para que se vea más grande
+            object-fit: cover;
+            opacity: 0.6;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 1200px) {
+            height: 1000px; 
+            padding: 2rem 1rem;
+
+            p {
+                font-size: 1rem;
+                padding: 1rem;
+                width: 90%;
+                top: 80%;
+            }
+
+            img {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            height: 600px; // Ajuste en tablets
+            padding: 2rem 1rem;
+
+            p {
+                font-size: 1rem;
+                padding: 1rem;
+                width: 90%;
+                top: 80%;
+            }
+
+            img {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            height: 400px; // Ajuste en móviles
+            padding: 1.5rem 1rem;
+
+            p {
+                font-size: 0.9rem;
+                padding: 0.8rem;
+                width: 95%;
+                top: 80%;
+            }
+
+            img {
+                height: auto;
+            }
+        }
+    }
+
+    // Sección Historia (Repostero y Artesano)
+    .seccion-historia {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+        align-items: center; // Centra todos los artículos de la historia
+    
+        .repostero, 
+        .artesano {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            background: #f5e1c5;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 900px;
+            width: 100%; // Asegura que ocupe todo el ancho disponible dentro de su contenedor
+            margin: 0 auto; // Centra correctamente en todas las pantallas
+    
+            img {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                border-radius: 10px;
+                margin-top: 1rem;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            }
+    
+            .contenido {
+                flex: 1;
+                text-align: center;
+                padding: 1rem;
+            }
+    
+            h3 {
+                font-size: 1.8rem;
+                color: var.$color-texto-oscuro;
+                margin-bottom: 1rem;
+            }
+    
+            p {
+                font-size: 1rem;
+                color: var.$color-texto-oscuro;
+                text-align: justify;
+                line-height: 1.6;
+            }
+        }
+    
+        // 📱 Corrección en pantallas pequeñas
+        @media (max-width: 768px) {
+            padding: 0; // Elimina posibles desbalances
+    
+            .repostero, 
+            .artesano {
+                flex-direction: column;
+                align-items: center;
+                width: 90%; // Asegura que se vea alineado en móviles
+                text-align: left;
+    
+                .contenido {
+                    text-align: center;
+                }
+            }
+        }
+    
+        @media (max-width: 480px) {
+            padding: 0;
+    
+            .repostero, 
+            .artesano {
+                flex-direction: column;
+                align-items: center;
+                width: 95%; // Mejor ajuste en pantallas muy pequeñas
+                text-align: left;
+    
+                .contenido {
+                    text-align: center;
+                }
+            }
+        }
+    }    
+
+    // Sección Granjas Mejorada
+    .granjas {
+        background: var.$color-principal;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+        margin-top: 1rem;
+
+        h3 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #f8f0e3;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 1rem;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        // Responsividad en móviles
+        @media (max-width: 768px) {
+            padding: 1rem;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+                text-align: center;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            padding: 0.5rem;
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

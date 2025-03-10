@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repostería Bioartesa</title>
+    <link rel="stylesheet" href="../styles/sass/main.scss">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Montserrat:wght@100;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <figure class="logo">
+            <a href="../inicio.html">
+                <picture>
+                    <source srcset="../img/LOGO.webp" type="image/webp">
+                    <source srcset="../img/LOGO.png" type="image/png">
+                    <source srcset="../img/LOGO.jpg" type="image/jpg">
+                    <img src="../img/LOGO.png" alt="LOGO">
+                </picture>
+            </a>
+        </figure>
+        <form class="barra_busqueda">
+            <input type="text" placeholder="Buscar...">
+            <button class="boton_busqueda" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <aside class="actions">
+            <a href="./registro" class="boton_registro">Regístrate</a>
+            <button class="boton_carrito" aria-label="Carrito de compras">
+                <a href="./carrito.html">
+                    <i class="fa-solid fa-basket-shopping" style="color: #CC9487;"></i>
+                </a>
+            </button>
+        </aside>
+    </header>
+
+    <nav class="menu">
+        <a href="./sobreNosotros.html" class="objeto_menu">Sobre Nosotros</a>
+        <a href="./tienda.html" class="objeto_menu">Tienda</a>
+    </nav>
+
+    <main>
+        <section id="tienda">
+            <section id="productos">
+                <h2>Te puede interesar</h2>
+                <article class="bloque_productos">
+                    <section class="opciones">
+                        <i class="fa-solid fa-chevron-left" style="color: #644434;"></i>
+                        <article class="opcion">
+                            <figure>
+                                <source srcset="../img/panetone400.webp" type="image/webp">
+                                <source srcset="../img/panetone400.png" type="image/png">
+                                <source srcset="../img/panetone400.jpg" type="image/jpg">
+                                <img src="../img/panetone400.jpg" alt="Panetone">
+                                <p>Más vendido</p>
+                            </figure>
+                        </article>
+                        <article class="opcion">
+                            <figure>
+                                <source srcset="../img/tartaFresas400.webp" type="image/webp">
+                                <source srcset="../img/tartaFresas400.png" type="image/png">
+                                <source srcset="../img/tartaFresas400.jpg" type="image/jpg">
+                                <img src="../img/tartaFresas400.jpg" alt="Tarta de fresas">
+                                <p>Productos veganos</p>
+                            </figure>
+                        </article>
+                        <article class="opcion">
+                            <figure>
+                                <source srcset="../img/torrijas400.webp" type="image/webp">
+                                <source srcset="../img/torrijas400.png" type="image/png">
+                                <source srcset="../img/torrijas400.jpg" type="image/jpg">
+                                <img src="../img/torrijas400.jpg" alt="Torrijas">
+                                <p>Productos locales</p>
+                            </figure>
+                        </article>
+                        <article class="opcion">
+                            <figure>
+                                <source srcset="../img/panRustico400.webp" type="image/webp">
+                                <source srcset="../img/panRustico400.png" type="image/png">
+                                <source srcset="../img/panRustico400.jpg" type="image/jpg">
+                                <img src="../img/panRustico400.jpg" alt="Panes">
+                                <p>Panes</p>
+                            </figure>
+                        </article>
+                    
+                        <i class="fa-solid fa-chevron-right" style="color: #644434;"></i>
+                    </section>
+                </article>
+            </section>
+
+            <section id="productosVender">
+                <article id="rollitos">
+                    <figure>
+                        <picture>
+                            <!-- Imágenes para resolución máxima de 400px -->
+                            <source srcset="../img/rollitosCanela400.webp" media="(max-width: 400px)" type="image/webp">
+                            <source srcset="../img/rollitosCanela400.jpg" media="(max-width: 400px)" type="image/jpg">
+                            <source srcset="../img/rollitosCanela400.png" media="(max-width: 400px)" type="image/png">
+
+                            <!-- Imágenes para resolución máxima de 480px -->
+                            <source srcset="../img/rollitosCanela480.webp" media="(max-width: 480px)" type="image/webp">
+                            <source srcset="../img/rollitosCanela480.jpg" media="(max-width: 480px)" type="image/jpg">
+                            <source srcset="../img/rollitosCanela480.png" media="(max-width: 480px)" type="image/png">
+
+                            <!-- Imágenes para resolución máxima de 768px -->
+                            <source srcset="../img/rollitosCanela768.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/rollitosCanela768.jpg" media="(max-width: 768px)" type="image/jpg">
+
+                            <!-- Imágenes por defecto para pantallas más grandes -->
+                            <source srcset="../img/rollitosCanela1200.webp" type="image/webp">
+                            <source srcset="../img/rollitosCanela1200.jpg" type="image/jpg">
+                            <source srcset="../img/rollitosCanela1200.png" type="image/png">
+
+                            <img src="../img/rollitosCanela1200.jpg" alt="Rollitos de canela">
+                        </picture>
+                    </figure>
+                    <p>Rollitos de canela</p>
+                </article>
+
+                <article id="magdalenasNueves">
+                    <figure>
+                        <picture>
+                            <!-- Imágenes para resolución máxima de 400px -->
+                            <source srcset="../img/magdalenasNuecesPasas400.webp" media="(max-width: 400px)" type="image/webp">
+                            <source srcset="../img/magdalenasNuecesPasas400.jpg" media="(max-width: 400px)" type="image/jpg">
+                            <source srcset="../img/magdalenasNuecesPasas400.png" media="(max-width: 400px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 480px -->
+                            <source srcset="../img/magdalenasNuecesPasas480.webp" media="(max-width: 480px)" type="image/webp">
+                            <source srcset="../img/magdalenasNuecesPasas480.jpg" media="(max-width: 480px)" type="image/jpg">
+                            <source srcset="../img/magdalenasNuecesPasas480.png" media="(max-width: 480px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 768px -->
+                            <source srcset="../img/magdalenasNuecesPasas768.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/magdalenasNuecesPasas768.jpg" media="(max-width: 768px)" type="image/jpg">
+                
+                            <!-- Imágenes por defecto para pantallas más grandes -->
+                            <source srcset="../img/magdalenasNuecesPasas1200.webp" type="image/webp">
+                            <source srcset="../img/magdalenasNuecesPasas1200.jpg" type="image/jpg">
+                            <source srcset="../img/magdalenasNuecesPasas1200.png" type="image/png">
+                
+                            <img src="../img/magdalenasNuecesPasas1200.jpg" alt="Magdalenas de nueces y pasas">
+                        </picture>
+                    </figure>
+                    <p>Magdalenas de nueces y pasas</p>
+                </article>
+                
+                <article id="torrijas">
+                    <figure>
+                        <picture>
+                            <!-- Imágenes para resolución máxima de 400px -->
+                            <source srcset="../img/torrijas400.webp" media="(max-width: 400px)" type="image/webp">
+                            <source srcset="../img/torrijas400.jpg" media="(max-width: 400px)" type="image/jpg">
+                            <source srcset="../img/torrijas400.png" media="(max-width: 400px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 480px -->
+                            <source srcset="../img/torrijas480.webp" media="(max-width: 480px)" type="image/webp">
+                            <source srcset="../img/torrijas480.jpg" media="(max-width: 480px)" type="image/jpg">
+                            <source srcset="../img/torrijas480.png" media="(max-width: 480px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 768px -->
+                            <source srcset="../img/torrijas768.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/torrijas768.jpg" media="(max-width: 768px)" type="image/jpg">
+                
+                            <!-- Imágenes por defecto para pantallas más grandes -->
+                            <source srcset="../img/torrijas1200.webp" type="image/webp">
+                            <source srcset="../img/torrijas1200.jpg" type="image/jpg">
+                            <source srcset="../img/torrijas1200.png" type="image/png">
+                
+                            <img src="../img/torrijas1200.jpg" alt="Croissants de fresas y nata">
+                        </picture>
+                    </figure>
+                    <p>Croissants de fresas y nata</p>
+                </article>
+                
+
+                <article id="magdalenasChocolate">
+                    <figure>
+                        <picture>
+                            <!-- Imágenes para resolución máxima de 400px -->
+                            <source srcset="../img/magdalenaChocolate400.webp" media="(max-width: 400px)" type="image/webp">
+                            <source srcset="../img/magdalenaChocolate400.jpg" media="(max-width: 400px)" type="image/jpg">
+                            <source srcset="../img/magdalenaChocolate400.png" media="(max-width: 400px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 480px -->
+                            <source srcset="../img/magdalenaChocolate480.webp" media="(max-width: 480px)" type="image/webp">
+                            <source srcset="../img/magdalenaChocolate480.jpg" media="(max-width: 480px)" type="image/jpg">
+                            <source srcset="../img/magdalenaChocolate480.png" media="(max-width: 480px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 768px -->
+                            <source srcset="../img/magdalenaChocolate768.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/magdalenaChocolate768.jpg" media="(max-width: 768px)" type="image/jpg">
+                
+                            <!-- Imágenes por defecto para pantallas más grandes -->
+                            <source srcset="../img/magdalenaChocolate1200.webp" type="image/webp">
+                            <source srcset="../img/magdalenaChocolate1200.jpg" type="image/jpg">
+                            <source srcset="../img/magdalenaChocolate1200.png" type="image/png">
+                
+                            <img src="../img/magdalenaChocolate1200.jpg" alt="Magdalenas de chocolate">
+                        </picture>
+                    </figure>
+                    <p>Magdalenas de chocolate</p>
+                </article>
+
+                <article id="magdalenasCafé">
+                    <figure>
+                        <picture>
+                            <!-- Imágenes para resolución máxima de 400px -->
+                            <source srcset="../img/magdalenaCafeLavanda400.webp" media="(max-width: 400px)" type="image/webp">
+                            <source srcset="../img/magdalenaCafeLavanda400.jpg" media="(max-width: 400px)" type="image/jpg">
+                            <source srcset="../img/magdalenaCafeLavanda400.png" media="(max-width: 400px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 480px -->
+                            <source srcset="../img/magdalenaCafeLavanda480.webp" media="(max-width: 480px)" type="image/webp">
+                            <source srcset="../img/magdalenaCafeLavanda480.jpg" media="(max-width: 480px)" type="image/jpg">
+                            <source srcset="../img/magdalenaCafeLavanda480.png" media="(max-width: 480px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 768px -->
+                            <source srcset="../img/magdalenaCafeLavanda768.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/magdalenaCafeLavanda768.jpg" media="(max-width: 768px)" type="image/jpg">
+                
+                            <!-- Imágenes por defecto para pantallas más grandes -->
+                            <source srcset="../img/magdalenaCafeLavanda1200.webp" type="image/webp">
+                            <source srcset="../img/magdalenaCafeLavanda1200.jpg" type="image/jpg">
+                            <source srcset="../img/magdalenaCafeLavanda1200.png" type="image/png">
+                
+                            <img src="../img/magdalenaCafeLavanda1200.jpg" alt="Magdalenas de café y lavanda">
+                        </picture>
+                    </figure>
+                    <p>Magdalenas de café y lavanda</p>
+                </article>
+
+                <article id="panetone">
+                    <figure>
+                        <picture>
+                            <!-- Imágenes para resolución máxima de 400px -->
+                            <source srcset="../img/panetone400.webp" media="(max-width: 400px)" type="image/webp">
+                            <source srcset="../img/panetone400.jpg" media="(max-width: 400px)" type="image/jpg">
+                            <source srcset="../img/panetone400.png" media="(max-width: 400px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 480px -->
+                            <source srcset="../img/panetone480.webp" media="(max-width: 480px)" type="image/webp">
+                            <source srcset="../img/panetone480.jpg" media="(max-width: 480px)" type="image/jpg">
+                            <source srcset="../img/panetone480.png" media="(max-width: 480px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 768px -->
+                            <source srcset="../img/panetone768.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/panetone768.jpg" media="(max-width: 768px)" type="image/jpg">
+                
+                            <!-- Imágenes por defecto para pantallas más grandes -->
+                            <source srcset="../img/panetone1200.webp" type="image/webp">
+                            <source srcset="../img/panetone1200.jpg" type="image/jpg">
+                            <source srcset="../img/panetone1200.png" type="image/png">
+                
+                            <img src="../img/panetone1200.jpg" alt="Panetone">
+                        </picture>
+                    </figure>
+                    <p>Panetone</p>
+                </article>
+
+                <article id="tartaFresas">
+                    <figure>
+                        <picture>
+                            <!-- Imágenes para resolución máxima de 400px -->
+                            <source srcset="../img/tartaFresas400.webp" media="(max-width: 400px)" type="image/webp">
+                            <source srcset="../img/tartaFresas400.jpg" media="(max-width: 400px)" type="image/jpg">
+                            <source srcset="../img/tartaFresas400.png" media="(max-width: 400px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 480px -->
+                            <source srcset="../img/tartaFresas480.webp" media="(max-width: 480px)" type="image/webp">
+                            <source srcset="../img/tartaFresas480.jpg" media="(max-width: 480px)" type="image/jpg">
+                            <source srcset="../img/tartaFresas480.png" media="(max-width: 480px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 768px -->
+                            <source srcset="../img/tartaFresas768.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/tartaFresas768.jpg" media="(max-width: 768px)" type="image/jpg">
+                
+                            <!-- Imágenes por defecto para pantallas más grandes -->
+                            <source srcset="../img/tartaFresas1200.webp" type="image/webp">
+                            <source srcset="../img/tartaFresas1200.jpg" type="image/jpg">
+                            <source srcset="../img/tartaFresas1200.png" type="image/png">
+                
+                            <img src="../img/tartaFresas1200.jpg" alt="Tarta de fresas y nata">
+                        </picture>
+                    </figure>
+                    <p>Tarta de fresas y nata</p>
+                </article>
+
+                <article id="pastelChocolate">
+                    <figure>
+                        <picture>
+                            <!-- Imágenes para resolución máxima de 400px -->
+                            <source srcset="../img/pastelChocolate400.webp" media="(max-width: 400px)" type="image/webp">
+                            <source srcset="../img/pastelChocolate400.jpg" media="(max-width: 400px)" type="image/jpg">
+                            <source srcset="../img/pastelChocolate400.png" media="(max-width: 400px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 480px -->
+                            <source srcset="../img/pastelChocolate480.webp" media="(max-width: 480px)" type="image/webp">
+                            <source srcset="../img/pastelChocolate480.jpg" media="(max-width: 480px)" type="image/jpg">
+                            <source srcset="../img/pastelChocolate480.png" media="(max-width: 480px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 768px -->
+                            <source srcset="../img/pastelChocolate768.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/pastelChocolate768.jpg" media="(max-width: 768px)" type="image/jpg">
+                
+                            <!-- Imágenes por defecto para pantallas más grandes -->
+                            <source srcset="../img/pastelChocolate1200.webp" type="image/webp">
+                            <source srcset="../img/pastelChocolate1200.jpg" type="image/jpg">
+                            <source srcset="../img/pastelChocolate1200.png" type="image/png">
+                
+                            <img src="../img/pastelChocolate1200.jpg" alt="Pastel de chocolate">
+                        </picture>
+                    </figure>
+                    <p>Pastel de chocolate</p>
+                </article>
+
+                <article id="tartaZanahoria">
+                    <figure>
+                        <picture>
+                            <!-- Imágenes para resolución máxima de 400px -->
+                            <source srcset="../img/tartaZanahoria400.webp" media="(max-width: 400px)" type="image/webp">
+                            <source srcset="../img/tartaZanahoria400.jpg" media="(max-width: 400px)" type="image/jpg">
+                            <source srcset="../img/tartaZanahoria400.png" media="(max-width: 400px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 480px -->
+                            <source srcset="../img/tartaZanahoria480.webp" media="(max-width: 480px)" type="image/webp">
+                            <source srcset="../img/tartaZanahoria480.jpg" media="(max-width: 480px)" type="image/jpg">
+                            <source srcset="../img/tartaZanahoria480.png" media="(max-width: 480px)" type="image/png">
+                
+                            <!-- Imágenes para resolución máxima de 768px -->
+                            <source srcset="../img/tartaZanahoria768.webp" media="(max-width: 768px)" type="image/webp">
+                            <source srcset="../img/tartaZanahoria768.jpg" media="(max-width: 768px)" type="image/jpg">
+                
+                            <!-- Imágenes por defecto para pantallas más grandes -->
+                            <source srcset="../img/tartaZanahoria1200.webp" type="image/webp">
+                            <source srcset="../img/tartaZanahoria1200.jpg" type="image/jpg">
+                            <source srcset="../img/tartaZanahoria1200.png" type="image/png">
+                
+                            <img src="../img/tartaZanahoria1200.jpg" alt="Tarta de zanahoria">
+                        </picture>
+                    </figure>
+                    <p>Tarta de zanahoria</p>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <section class="social-media">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" style="font-size: 2em;"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" style="font-size: 2em;"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" style="font-size: 2em;"></i></a>
+        </section>
+
+        <section class="footer-info">
+            <p><a href="#">Información de contacto</a></p>
+            <p><a href="#">Términos de uso</a></p>
+            <p>© 2025 Repostería Bioartesa</p>
+        </section>
+    </footer>
+</body>
+
+</html>

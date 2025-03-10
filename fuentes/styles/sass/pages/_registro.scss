@@ -1,0 +1,74 @@
+@use '../utilidades/variables' as variables;
+@use '../utilidades/mixins';
+@use '../utilidades/funciones';
+
+/* Clase auxiliar para reutilizar estilos */
+.auxiliar {
+    background-color: variables.$color-secundario;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: variables.$fuente-principal;
+    color: variables.$color-texto-claro;
+}
+
+// Estilos para la página de Registro
+.registro {
+    text-align: center;
+    padding: 2rem;
+
+    .formulario {
+        background: variables.$color-activo;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: left;
+        width: 80%;
+        max-width: 900px; 
+        margin: 0 auto;
+
+        h2 {
+            font-size: 1.5rem;
+            color: variables.$color-texto-oscuro;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-size: 1rem;
+                color: black;
+                margin-top: 1rem;
+            }
+
+            input[type="email"],
+            input[type="password"] {
+                padding: 0.5rem;
+                border-radius: 5px;
+                border: 1px solid variables.$color-secundario;
+                margin-top: 0.3rem;
+            }
+
+            .recordar {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            .boton-enviar {
+                @extend .auxiliar;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .formulario {
+            width: 90%;
+            padding: 1rem;
+        }
+    }
+}

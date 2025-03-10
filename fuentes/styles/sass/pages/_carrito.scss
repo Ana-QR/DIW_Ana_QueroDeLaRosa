@@ -1,0 +1,180 @@
+@use '../utilidades/variables' as var;
+@use '../utilidades/mixins' as mixins;
+@use '../utilidades/funciones' as funciones;
+
+.auxiliar {
+    background-color: var.$color-secundario;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: var.$fuente-principal;
+    color: var.$color-texto-claro;
+}
+
+// Estilos para la página de Carrito
+.carrito {
+    text-align: center;
+    padding: 2rem;
+
+    .contenedor-carrito {
+        border-radius: 10px;
+        background: var.$color-activo;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            gap: 1rem;
+        }
+    }
+
+    button {
+        @extend .auxiliar;
+        margin-top: 20px;
+        @include funciones.zoom-on-hover;
+    }
+
+    p{
+        font-family: var.$fuente-secundaria;
+        color: black;
+    }
+
+    .lista-articulos {
+        flex: 2;
+        background: var.$color-bloques;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: left;
+        width: 100%;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th{
+            padding: 0.5rem;
+            border-bottom: 1px solid var.$color-texto-oscuro;
+            text-align: left;
+            color: var.$color-texto-oscuro;
+            font-family: var.$fuente-principal;          
+        }
+
+        td{
+            padding: 0.5rem;
+            border-bottom: 1px solid var.$color-texto-oscuro;
+            color: black;
+            font-family: var.$fuente-secundaria;
+        }
+
+        .titulos{
+            font-family: var.$fuente-principal;
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 1200px) {
+            overflow-x: auto;
+            display: block;
+
+            table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+    }
+    .factura {
+        flex: 1;
+        background: var.$color-bloques;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            color: var.$color-texto-oscuro;
+        }
+
+        button {
+            align-self: flex-end;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+
+    // Cupón a lo largo de toda la pantalla
+    .cupon {
+        background: var.$color-pastel;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 25px;
+        width: 100vw; // Asegura que ocupe el ancho completo de la pantalla
+        max-width: 100%; // Evita desbordamientos inesperados
+        margin-left: auto; // Centra correctamente
+        margin-right: auto; // Centra correctamente
+        text-align: center;
+    
+        h2 {
+            color: var.$color-texto-oscuro;
+        }
+    
+        // Contenedor para el input y botón
+        .cupon-input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; // Espacio entre input y botón
+            max-width: 400px; // No hacerlo muy grande en pantallas grandes
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        input {
+            flex: 1; // Permite que el input se adapte al contenedor
+            min-width: 50px; // Previene que se haga demasiado pequeño
+            padding: 0.5rem;
+            border: 1px solid var.$color-secundario;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            @extend .auxiliar;
+            padding: 0.5rem 1rem;
+            white-space: nowrap; // Evita que el texto del botón se corte en varias líneas
+        }
+
+        @media (max-width: 768px) {
+            .cupon-input-container {
+                flex-direction: column; // En móviles, apila el input y el botón
+                width: 90%; // Reduce el tamaño para evitar desbordamiento
+            }
+
+            input {
+                width: 100%; // Asegura que el input se ajuste al contenedor
+                font-size: 0.9rem; // Reduce ligeramente el tamaño del texto
+            }
+
+            button {
+                width: 100%; // Hace que el botón tenga el mismo ancho que el input
+            }
+        }
+    }
+    
+}

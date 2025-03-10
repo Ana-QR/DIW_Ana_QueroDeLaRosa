@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | Repostería Bioartesa</title>
+    <link rel="stylesheet" href="../styles/sass/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&family=Montserrat:wght@100;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <figure class="logo">
+            <a href="../inicio.html">
+                <picture>
+                    <source srcset="../img/LOGO.webp" type="image/webp">
+                    <source srcset="../img/LOGO.png" type="image/png">
+                    <source srcset="../img/LOGO.jpg" type="image/jpg">
+                    <img src="../img/LOGO.png" alt="LOGO">
+                </picture>
+            </a>
+        </figure>
+        <form class="barra_busqueda">
+            <input type="text" placeholder="Buscar...">
+            <button class="boton_busqueda" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <aside class="actions">
+            <a href="./registro" class="boton_registro">Regístrate</a>
+            <button class="boton_carrito" aria-label="Carrito de compras">
+                <a href="./carrito.html">
+                    <i class="fa-solid fa-basket-shopping" style="color: #CC9487;"></i>
+                </a>
+            </button>
+        </aside>
+    </header>
+
+    <nav class="menu">
+        <a href="./sobreNosotros.html" class="objeto_menu">Sobre Nosotros</a>
+        <a href="./tienda.html" class="objeto_menu">Tienda</a>
+    </nav>
+
+    <main class="carrito">
+        <section class="contenedor-carrito">
+            <section class="lista-articulos">
+                <table>
+                    <thead>
+                        <tr class="titulos">
+                            <th>Artículos</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <article id="rollitos">
+                                    <figure>
+                                        <picture>
+                                            <!-- Imágenes para resolución máxima de 400px -->
+                                            <source srcset="../img/rollitosCanela400.webp" media="(max-width: 400px)" type="image/webp">
+                                            <source srcset="../img/rollitosCanela400.jpg" media="(max-width: 400px)" type="image/jpg">
+                                            <source srcset="../img/rollitosCanela400.png" media="(max-width: 400px)" type="image/png">
+                                            <img src="../img/rollitosCanela400.jpg" alt="Rollitos de canela">
+                                        </picture>
+                                    </figure>
+                                    <p>Rollitos de canela</p>
+                                </article>
+                            </td>
+                            <td>5€</td>
+                            <td>2</td>
+                            <td>10€</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <article id="magdalenasChocolate">
+                                    <figure>
+                                        <picture>
+                                            <!-- Imágenes para resolución máxima de 400px -->
+                                            <source srcset="../img/magdalenaChocolate400.webp" media="(max-width: 400px)" type="image/webp">
+                                            <source srcset="../img/magdalenaChocolate400.jpg" media="(max-width: 400px)" type="image/jpg">
+                                            <source srcset="../img/magdalenaChocolate400.png" media="(max-width: 400px)" type="image/png">
+                                            
+                                            <img src="../img/magdalenaChocolate400.jpg" alt="Magdalenas de chocolate">
+                                        </picture>
+                                    </figure>
+                                    <p>Magdalena de chocolate</p>
+                                </article>
+                                        
+                            </td>
+                            <td>5€</td>
+                            <td>1</td>
+                            <td>5€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section class="factura">
+                <h2>Factura final</h2>
+                <p>Rollitos de canela... 10€</p>
+                <p>Barquillos dulces... 5€</p>
+                <button class="pago">Proceder al pago</button>
+            </section>
+        </section>
+
+        <section class="cupon">
+            <input type="text" placeholder="Número del cupón">
+            <button class="boton-cupon">Añadir cupón</button>
+        </section>
+    </main>
+
+    <footer>
+        <section class="social-media">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" style="font-size: 2em;"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter" style="font-size: 2em;"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" style="font-size: 2em;"></i></a>
+        </section>
+
+        <section class="footer-info">
+            <p><a href="#">Información de contacto</a></p>
+            <p><a href="#">Términos de uso</a></p>
+            <p>© 2025 Repostería Bioartesa</p>
+        </section>
+    </footer>
+</body>
+
+</html>

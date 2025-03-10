@@ -1,0 +1,53 @@
+@use "../utilidades/variables" as var; // Importa las variables desde el archivo variables.scss y las asigna al alias 'var'
+@use "../utilidades/mixins"; // Importa los mixins desde el archivo mixins.scss
+@use "../utilidades/funciones"; // Importa las funciones desde el archivo funciones.scss
+
+/* Estilos del pie de página */
+footer {
+  display: flex;
+  justify-content: space-between; // Distribuye el contenido: izquierda y derecha
+  align-items: center;
+  background-color: var.$color-secundario;
+  padding: 20px;
+  margin-top: auto;
+
+  /* Sección de redes sociales */
+  .social-media {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; // Alinea los iconos a la izquierda
+
+    a {
+      color: white;
+    }
+  }
+
+  /* Información del footer */
+  .footer-info {
+    text-align: right; // Alinea el texto a la derecha
+    color: white;
+    font-family: var.$fuente-secundaria;
+    
+    a {
+      color: white;
+    }
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 1000px) {
+  footer {
+    flex-direction: column; // Cambia a diseño vertical en pantallas pequeñas
+    align-items: center;
+    text-align: center;
+
+    .social-media {
+      justify-content: center; // Centra los iconos en móviles
+      margin-bottom: 10px;
+    }
+
+    .footer-info {
+      text-align: center;
+    }
+  }
+}
