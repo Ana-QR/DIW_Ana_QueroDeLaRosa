@@ -79,25 +79,8 @@ Esto iniciará un servidor local con recarga en vivo.
 ```bash
 npm run build
 ```
-Esto generará los archivos optimizados en la carpeta `dist/`.
+Esto generará los archivos optimizados en la carpeta `dist/` o como se haya llamado en el `package.json`.
 
-## Estructura del proyecto
-```plaintext
-📂 DIW_QueroDeLaRosa_Ana
-│── 📂 src  # Código fuente
-│   │── 📂 assets  # Imágenes, fuentes, íconos
-│   │── 📂 styles  # Archivos SASS
-│   │   │── 📂 base  # Reset, tipografías, variables
-│   │   │── 📂 components  # Botones, cards, modales...
-│   │   │── 📂 layout  # Header, footer, grid general
-│   │   │── main.scss  # Punto de entrada
-│   │── 📂 scripts  # Archivos JS
-│   │── 📂 pages  # HTML de cada página
-│── 📂 dist  # Archivos generados para producción
-│── package.json  # Dependencias y scripts
-│── .gitignore  # Archivos a ignorar en Git
-│── README.md  # Documentación
-```
 
 ## Autor
 **Ana Quero De La Rosa**
